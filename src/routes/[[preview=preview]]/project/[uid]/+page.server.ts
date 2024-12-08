@@ -2,7 +2,7 @@ import { createClient } from '$lib/prismicio';
 
 export async function load({ params, fetch, cookies }) {
 	const client = createClient({ fetch, cookies });
-
+      params.uid='book-library-app'
 	const page = await client.getByUID('project', params.uid);
 
 	return {
