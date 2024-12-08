@@ -11,7 +11,7 @@ export async function load({ params, fetch, cookies }) {
       const client = createClient({ fetch, cookies });
 
       // Debugging: log the UID to ensure it is a string and valid
-      console.log('Loading blog post with UID:', params.uid);
+      console.log('Loading blog post with UID', params.uid);
       
       const page = await client.getByUID('blogpost', params.uid);
 
